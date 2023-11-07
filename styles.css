@@ -1,0 +1,222 @@
+/*Implementando Fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/*Predefinimos los colores para no tener que ponerlo en el codigo 
+y solo tenemos que poner el nombre el cual le pusimos*/
+:root{
+    --color-texto: #011627;
+    --color-fondo: #f8f9fa;
+    --color-primario: #0455c8;
+    --color-secundario: #d5d9d3;
+    --fuente-grande: 4.1rem;
+    --fuente-p: 1rem;
+}
+
+body{
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+header{ /*Indicamos la posicion que tendra en la parte de arriba*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all ease .55s;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    color: var(--color-texto);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo i{
+    vertical-align: middle;
+    color: var(--color-primario);
+    font-size: 27px;
+    margin-right: 5px;
+}
+
+.listanav{
+    display: flex;
+}
+
+.listanav a {
+    font-size: var(--fuente-p);
+    color: var(--color-texto);
+    font-weight: 600;
+    margin: 10px 35px; /* Ajusta el valor superior (10px) para bajar el texto */
+    transition: all ease .55s;
+}
+
+
+.listanav a:hover{
+    color: var(--color-primario);
+}
+
+.listanav a.activo{
+    color: var(--color-primario);
+}
+
+.nav-derecha{
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn{
+    display: inline-block;
+    padding: 10px 25px;
+    color: var(--color-fondo);
+    background: var(--color-primario);
+    font-size: 14px;
+    font-weight: 500;
+    border: 2px solid var(--color-primario);
+    border-radius: 5px;
+    margin-right: 20px;
+    transition: all ease .55s;
+}
+
+.nav-btn:hover{
+    background: transparent;
+    border: 2px solid var(--color-texto);
+    color: var(--color-texto);
+}
+
+#darkmode{
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--color-texto);
+    margin-left: 10px;
+}
+
+section{
+    padding: 0 10%;
+}
+
+.contenido{
+    position:  relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+}
+
+.contenido-img{
+    height: 550px;
+    width: 550px;
+}
+
+.contenido-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contenido-in{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.contenido-texto h1{
+    font-size: var(--fuente-grande);
+    height: 1.3;
+    font-weight: 800;
+    margin-top: 5.5rem;
+}
+
+.contenido-texto h4{
+    margin: 5px 0 25px;
+    color: var(--color-primario);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contenido-texto p{
+    color: var(--color-texto);
+    font-size: 13px;
+    font-weight: 500;
+    max-width: 500px;
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+}
+
+.contenedor{
+    background-color: var(--color-secundario);
+    padding: 25px 40px;
+    border-radius: 1rem;
+    box-shadow: rgba(33, 25, 38, 0,5) 0px 10px 10px -10px;
+    transition: all ease .55s;
+    cursor: pointer;
+}
+
+.contenedor img{
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor h3{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.contenedor h5{
+    color: var(--color-primario);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+
+.contenedor:hover{
+    transform: translate(-5px) scale(1.1);
+}
+
+.flecha{
+    position: absolute;
+    bottom: 3.3rem;
+    right: 9%;
+}
+
+.flecha i{
+    padding: 12px;
+    color: var(--color-fondo);
+    background: var(--color-texto);
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 3rem;
+    transition: all ease .55s;
+}
+
+.footer{
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+body.color{
+    --color-texto: #f8f9fa;
+    --color-fondo: #011627;
+    --color-primario: #0466c8;
+    --color-secundario: #0d1b2a;
+}
